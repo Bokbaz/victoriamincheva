@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# Next.js
+/.next
+/out
+
+# local configuration and Vercel metadata
+.env*
+!.env.example
+.vercel
+
+# paid guide source: upload this to the private Supabase bucket instead
+/Resources/*.pdf
+
+# logs and OS files
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.DS_Store
+/playwright-report
+/test-results
+
+# TypeScript
+*.tsbuildinfo

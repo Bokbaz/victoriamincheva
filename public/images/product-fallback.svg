@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Product image unavailable</title>
+  <desc id="desc">A minimal cosmetic compact illustration.</desc>
+  <rect width="600" height="600" fill="#f8f3ee"/>
+  <circle cx="300" cy="310" r="124" fill="#eadbd4" stroke="#6a292e" stroke-width="5"/>
+  <circle cx="300" cy="310" r="86" fill="#c99192" opacity=".72"/>
+  <path d="M176 280c16-76 64-120 124-120s108 44 124 120" fill="none" stroke="#6a292e" stroke-width="5"/>
+  <path d="m456 126 9 24 24 9-24 9-9 24-9-24-24-9 24-9 9-24Z" fill="#6a292e"/>
+</svg>
