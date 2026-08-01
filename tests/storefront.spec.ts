@@ -35,6 +35,8 @@ test("renders the guide funnel and every supplied affiliate link", async ({ page
     page.getByRole("heading", { level: 1, name: "The full glam I actually wear." }),
   ).toBeVisible();
   await expect(page.locator("#guide").getByText("$4.99", { exact: true })).toBeVisible();
+  await expect(page.getByText("PDF + video guide", { exact: true })).toBeVisible();
+  await expect(page.getByText("Inside the guide", { exact: true })).toHaveCount(0);
   await expect(page.locator("article.product-card")).toHaveCount(18);
 
   for (const href of affiliateLinks) {

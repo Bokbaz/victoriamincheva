@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  BookOpenText,
   Check,
   CreditCard,
   Download,
   ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 
 import { CheckoutNotice } from "@/components/checkout-notice";
@@ -19,51 +17,10 @@ import { getSiteUrl, guide, siteConfig } from "@/lib/site";
 import styles from "./home.module.css";
 
 const benefits = [
+  "A step-by-step PDF and follow-along video guide",
   "My complete routine, in the order I do it",
   "Product placement and application notes",
   "The little fixes that keep everything polished",
-  "An easy routine you can repeat at your own pace",
-];
-
-const guideChapters = [
-  {
-    number: "01",
-    title: "Prep & base",
-    copy: "Build the smooth canvas that makes every next step sit better.",
-  },
-  {
-    number: "02",
-    title: "Sculpt & define",
-    copy: "Place dimension intentionally, without making the finish feel heavy.",
-  },
-  {
-    number: "03",
-    title: "Eyes & finish",
-    copy: "Bring the look together and lock in the details that make it pop.",
-  },
-];
-
-const faqItems = [
-  {
-    question: "How do I receive the guide?",
-    answer:
-      "After Stripe confirms your payment, you will land on a private download page. Your PDF link is generated securely and expires after a short time, but you can refresh the success page to generate a new one.",
-  },
-  {
-    question: "Is it beginner-friendly?",
-    answer:
-      "Yes. The routine is laid out in a practical order so you can work through it at your own pace, even if full glam is new to you.",
-  },
-  {
-    question: "Can I read it on my phone?",
-    answer:
-      "Yes. The PDF opens on phones, tablets, and computers. You can save it to your device after downloading it.",
-  },
-  {
-    question: "What if my download does not work?",
-    answer:
-      "Return to the payment success page and tap the download button again. If you still need help, message Victoria on Instagram at @victoriyam_.",
-  },
 ];
 
 type HomeProps = {
@@ -78,7 +35,7 @@ export default async function Home({ searchParams }: HomeProps) {
     name: guide.name,
     image: `${getSiteUrl()}${guide.image}`,
     description:
-      "Victoria Mincheva's step-by-step guide to the full glam look she wears most days.",
+      "Victoria Mincheva's step-by-step PDF and video guide to the full glam look she wears most days.",
     brand: { "@type": "Person", name: siteConfig.name },
     offers: {
       "@type": "Offer",
@@ -124,7 +81,8 @@ export default async function Home({ searchParams }: HomeProps) {
               <h1>The full glam I actually wear.</h1>
               <p className={styles.heroLead}>
                 My exact routine, without the gatekeeping. Learn the order, placement,
-                and small details that make the whole look come together.
+                and small details that make the whole look come together with the PDF
+                and included follow-along video guide.
               </p>
             </Reveal>
 
@@ -164,7 +122,8 @@ export default async function Home({ searchParams }: HomeProps) {
                 id="guide-primary-cta"
               />
               <p className={styles.purchaseReassurance}>
-                Secure checkout through Stripe. Download immediately after payment.
+                Secure checkout through Stripe. Get the PDF and video guide immediately
+                after payment.
               </p>
             </Reveal>
 
@@ -175,47 +134,12 @@ export default async function Home({ searchParams }: HomeProps) {
               </div>
               <div>
                 <Download aria-hidden="true" size={20} strokeWidth={1.6} />
-                <span>Instant PDF</span>
+                <span>PDF + video guide</span>
               </div>
               <div>
                 <CreditCard aria-hidden="true" size={20} strokeWidth={1.6} />
                 <span>Pay once</span>
               </div>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className={styles.insideSection}>
-          <div className={styles.sectionInner}>
-            <Reveal className={styles.sectionHeading}>
-              <p className={styles.eyebrow}>Inside the guide</p>
-              <h2>Not more makeup. A better order of operations.</h2>
-              <p>
-                Keep it beside your mirror and follow a routine that has already been
-                worked out for you.
-              </p>
-            </Reveal>
-
-            <div className={styles.chapterList}>
-              {guideChapters.map((chapter, index) => (
-                <Reveal className={styles.chapter} delay={index * 70} key={chapter.number}>
-                  <span>{chapter.number}</span>
-                  <div>
-                    <h3>{chapter.title}</h3>
-                    <p>{chapter.copy}</p>
-                  </div>
-                  <BookOpenText aria-hidden="true" size={22} strokeWidth={1.4} />
-                </Reveal>
-              ))}
-            </div>
-
-            <Reveal className={styles.guideQuote}>
-              <Sparkles aria-hidden="true" size={23} strokeWidth={1.5} />
-              <p>
-                “The routine I reach for when I want everything to look polished,
-                balanced, and completely put together.”
-              </p>
-              <span>Victoria</span>
             </Reveal>
           </div>
         </section>
@@ -240,42 +164,6 @@ export default async function Home({ searchParams }: HomeProps) {
               and availability are set by Amazon and may change after you leave this site.
             </p>
           </div>
-        </section>
-
-        <section className={styles.faqSection}>
-          <div className={styles.faqInner}>
-            <Reveal className={styles.faqHeading}>
-              <p className={styles.eyebrow}>Before you ask</p>
-              <h2>The useful details</h2>
-            </Reveal>
-            <div className={styles.faqList}>
-              {faqItems.map((item, index) => (
-                <Reveal delay={index * 45} key={item.question}>
-                  <details className={styles.faqItem}>
-                    <summary>{item.question}</summary>
-                    <div>
-                      <p>{item.answer}</p>
-                    </div>
-                  </details>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.closingSection}>
-          <Reveal className={styles.closingInner}>
-            <p className={styles.closingMark}>V</p>
-            <div>
-              <p className={styles.eyebrow}>From my makeup bag to yours</p>
-              <h2>Beauty should feel exciting, not confusing.</h2>
-              <p>
-                Thank you for being here and supporting what I truly love. I hope the
-                guide makes your next full glam feel a little easier.
-              </p>
-              <span className={styles.signature}>Victoria</span>
-            </div>
-          </Reveal>
         </section>
       </main>
 

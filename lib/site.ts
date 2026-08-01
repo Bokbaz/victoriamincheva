@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Victoria Mincheva",
   title: "Victoria Mincheva | Beauty guides and favourites",
   description:
-    "Victoria Mincheva's full glam guide and a curated shelf of the beauty products she uses and recommends.",
+    "Victoria Mincheva's full glam PDF and video guide, plus a curated shelf of the beauty products she uses and recommends.",
   instagram: "https://www.instagram.com/victoriyam_/",
   tiktok: "https://www.tiktok.com/@victoriyaam",
 };
