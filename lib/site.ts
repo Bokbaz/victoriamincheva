@@ -16,15 +16,39 @@ export const guide = {
   image: "/images/victoria-guide.webp",
 };
 
+function normalizeSiteUrl(value: string) {
+  const trimmedValue = value.trim().replace(/\/+$/, "");
+
+  if (!trimmedValue) {
+    return undefined;
+  }
+
+  const url = /^https?:\/\//i.test(trimmedValue)
+    ? trimmedValue
+    : `https://${trimmedValue}`;
+
+  try {
+    const parsedUrl = new URL(url);
+
+    if (parsedUrl.protocol !== "http:" && parsedUrl.protocol !== "https:") {
+      return undefined;
+    }
+
+    return parsedUrl.toString().replace(/\/$/, "");
+  } catch {
+    return undefined;
+  }
+}
+
 export function getSiteUrl() {
   if (process.env.VERCEL_ENV === "preview" && process.env.VERCEL_BRANCH_URL) {
     return `https://${process.env.VERCEL_BRANCH_URL}`;
   }
 
-  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const configuredUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? "");
 
   if (configuredUrl) {
-    return configuredUrl.replace(/\/$/, "");
+    return configuredUrl;
   }
 
   if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
