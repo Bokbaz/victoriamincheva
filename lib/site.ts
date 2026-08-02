@@ -13,7 +13,7 @@ export const guide = {
   price: "$4.99",
   priceCents: 499,
   currency: "usd",
-  image: "/images/victoria-guide.webp",
+  image: "/images/full_glam_thumbnail.jpg",
 };
 
 function normalizeSiteUrl(value: string) {

@@ -184,7 +184,7 @@ Do all testing with Stripe test-mode credentials first.
 2. Turn on **Test mode**.
 3. Open **Product catalog → Add product**.
 4. Set the name to `Victoria Mincheva Full Glam Guide`.
-5. Optionally use the guide thumbnail from `public/images/victoria-guide.webp`.
+5. Optionally use the guide thumbnail from `public/images/full_glam_thumbnail.jpg`.
 6. Choose **One time** pricing.
 7. Set the price to exactly **4.99 USD**.
 8. Save the product.

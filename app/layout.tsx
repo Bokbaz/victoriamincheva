@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/images/victoria-guide.webp",
-        width: 1470,
-        height: 956,
+        url: "/images/full_glam_thumbnail.jpg",
+        width: 883,
+        height: 1570,
         alt: "Victoria Mincheva wearing her signature full glam look",
       },
     ],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/images/victoria-guide.webp"],
+    images: ["/images/full_glam_thumbnail.jpg"],
   },
   robots: {
     index: true,
