@@ -1,7 +1,7 @@
 .page {
   min-height: 100svh;
   padding: max(1.5rem, env(safe-area-inset-top)) 1.25rem max(2.5rem, env(safe-area-inset-bottom));
-  background: var(--color-rose-soft);
+  background: var(--color-silken);
 }
 
 .wordmark {
@@ -36,13 +36,13 @@
   place-items: center;
   margin-bottom: 1.25rem;
   border-radius: 50%;
-  background: oklch(91% 0.045 145);
+  background: oklch(87% 0.026 130.8);
   color: var(--color-success);
 }
 
 .eyebrow {
   margin: 0 0 0.65rem;
-  color: var(--color-rose);
+  color: var(--color-taupe);
   font-size: 0.7rem;
   font-weight: 750;
   letter-spacing: 0.12em;
@@ -108,9 +108,9 @@
   gap: 0.65rem;
   margin-top: 1.5rem;
   padding: 0.85rem 1.25rem;
-  border: 1px solid var(--color-cherry);
+  border: 1px solid var(--color-juniper);
   border-radius: var(--radius-sm);
-  background: var(--color-cherry);
+  background: var(--color-juniper);
   color: var(--color-surface);
   font-weight: 650;
   text-decoration: none;
@@ -118,7 +118,7 @@
 
 .supportLink {
   background: transparent;
-  color: var(--color-cherry);
+  color: var(--color-juniper);
 }
 
 .helpText {
@@ -155,7 +155,7 @@
 .loadingLineWide,
 .loadingLine {
   border-radius: var(--radius-sm);
-  background: var(--color-rose-soft);
+  background: var(--color-silken);
   animation: pulse 1.4s ease-in-out infinite alternate;
 }
 

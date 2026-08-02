@@ -60,7 +60,7 @@
   width: 14rem;
   height: 14rem;
   border-radius: 50%;
-  background: var(--color-rose-soft);
+  background: var(--color-silken);
   filter: blur(8px);
   opacity: 0.72;
 }
@@ -81,7 +81,7 @@
 .eyebrow,
 .featuredLabel {
   margin: 0 0 0.75rem;
-  color: var(--color-rose);
+  color: var(--color-taupe);
   font-size: 0.72rem;
   font-weight: 750;
   letter-spacing: 0.13em;
@@ -129,7 +129,7 @@
   position: absolute;
   inset: 0 -0.55rem -0.65rem 0.55rem;
   border-radius: 0.25rem 0.6rem 0.6rem 0.25rem;
-  background: var(--color-cherry);
+  background: var(--color-juniper);
   transform: rotate(3deg);
 }
 
@@ -137,7 +137,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  border: 1px solid oklch(82% 0.025 35);
+  border: 1px solid var(--color-line);
   border-radius: 0.25rem 0.6rem 0.6rem 0.25rem;
   background: var(--color-surface);
   box-shadow: var(--shadow-soft);
@@ -148,7 +148,7 @@
   position: absolute;
   inset: 0 auto 0 0;
   width: 0.45rem;
-  background: oklch(23% 0.025 27);
+  background: var(--palette-onyx);
   content: "";
   opacity: 0.72;
 }
@@ -169,7 +169,7 @@
   font-weight: 650;
   letter-spacing: 0.12em;
   text-align: center;
-  text-shadow: 0 1px 8px oklch(20% 0.02 25 / 0.55);
+  text-shadow: 0 1px 8px oklch(25.6% 0 89.9 / 0.55);
   text-transform: uppercase;
 }
 
@@ -201,7 +201,7 @@
 
 .price {
   margin: 0.5rem 0 0;
-  color: var(--color-cherry);
+  color: var(--color-juniper);
   font-family: var(--font-display), Georgia, serif;
   font-size: clamp(1.65rem, 7vw, 2.5rem);
   font-variant-numeric: tabular-nums;
@@ -234,7 +234,7 @@
 
 .guideCopy li svg {
   margin-top: 0.05rem;
-  color: var(--color-rose);
+  color: var(--color-taupe);
 }
 
 .primaryPurchase,
@@ -336,14 +336,14 @@
   min-height: 2.75rem;
   min-width: 2.75rem;
   padding-inline: 0.25rem;
-  color: oklch(84% 0.014 40);
+  color: var(--color-silken);
   font-size: 0.8rem;
   text-underline-offset: 0.25em;
 }
 
 .footerInner > p {
   margin: 0;
-  color: oklch(68% 0.013 40);
+  color: var(--palette-moss);
   font-size: 0.72rem;
 }
 
